@@ -1,0 +1,21 @@
+.custom-button {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #921b1b;
+  border: 0;
+  border-radius: 3px;
+  background: #e9dee0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: Helvetica;
+}
+
+.custom-button:hover {
+  transform: scale(1.05);
+}
