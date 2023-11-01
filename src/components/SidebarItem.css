@@ -1,0 +1,11 @@
+.containerSDI {
+  display: flex;
+  align-items: center;
+  background-color: #e9dee0;
+  font-size: 20px;
+  color: #921b1b;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 15px 20px;
+}

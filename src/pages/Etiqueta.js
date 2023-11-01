@@ -1,8 +1,17 @@
+import Header from "../components/Header";
+import Button from "../components/Button";
+import "./Etiqueta.css";
+
 function Etiqueta() {
   return (
-    <div>
-      <p> {localStorage.getItem("myToken")} </p>
-    </div>
+    <>
+      <div id="corpo">
+        <div className="header">
+          <Header />
+        </div>
+        <Button label="klemerson" />
+      </div>
+    </>
   );
 }
 

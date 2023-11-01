@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+#corpo{
+  background-color: aqua;
+  width: 100%;
+}
+
+.tet {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}

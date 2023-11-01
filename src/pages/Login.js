@@ -1,15 +1,16 @@
-import "./Login.css"
+import "./Login.css";
 import { Input } from "../components/Input.js";
 import Button from "../components/Button";
 import KeyIcon from "@mui/icons-material/Key";
 import PersonIcon from "@mui/icons-material/Person";
 import { useState } from "react";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
+  const navigate = useNavigate();
 
   async function gerarToken() {
     console.log("consultando...");
@@ -29,14 +30,16 @@ function Login() {
 
       localStorage.setItem("myToken", token.data.accessToken);
       console.log(localStorage);
+      navigate("/home");
     } catch (error) {
+      alert("ERRO");
       console.error("Erro na solicitação:", error);
     }
   }
 
   return (
     <div id="div_geral">
-      <div  id="main">
+      <div id="main">
         <form
           onSubmit={(event) => {
             event.preventDefault();
@@ -60,17 +63,15 @@ function Login() {
             icon={<KeyIcon />}
           />
 
-          <div className="back">
-            <Button label="Entrar" />
-          </div>
+          <Button label="Entrar" />
         </form>
       </div>
       <div id="formulario">
         <div>
-          <img id="img" src="/CPTK.png" />
+          <img id="logo" src="/CPTK.png" />
         </div>
         <div id="textForm">
-          <h5 id="titulo_main">Tira-Facill</h5>
+          <h5 id="titulo_main">Tira-Facil</h5>
         </div>
       </div>
     </div>
