@@ -1,22 +1,73 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 
-.header {
-  display: flex;
-  flex-direction: row;
+#bodyEtiqueta {
+  height: calc(100vh - 70px);
+  width: 100vw;
 }
-#corpo{
-  background-color: aqua;
+
+#containerEtiqueta {
+  width: 50%;
+  height: 80%;
+}
+
+#botaoPreco {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin-left: 10px;
+  margin-top: 0;
+  color: black;
+  background-color: #1a17173b;
+  width: 100px;
+}
+
+#topo {
   width: 100%;
+  height: 70px;
 }
 
-.tet {
-  width: 80px;
+#topo > input {
+  width: 70%;
+  height: 60%;
+  border: none;
+  border-radius: 5px;
+}
+#corpo12 {
+  /* border: 1px solid; */
   display: flex;
   align-items: center;
+  width: 100%;
+  height: calc(100% - 70px);
+}
+
+#notFound{
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  display: flex;
+  height: 50%;
+  padding-right: 50px;
+  padding-bottom: 100px;
+  width: 100%;
+  align-items: center;
   justify-content: center;
-  
+  /* background-color: green; */
+}
+
+#input{
+  width: 50px;
+ 
+}
+
+#carregando{
+  padding-top: 20px;
+  text-align: center;
+}
+
+table,
+td {
+  border: 1px solid #333;
+}
+
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
 }

@@ -10,9 +10,9 @@ export function Input({ placeholder, type, icon, setValue }) {
     <>
       <TextField
         label={
-          <div style={{ display: "flex", alignItems: "start" }}>
+          <div style={{ display: "flex", alignItems: "start",}}>
             {icon && <span style={{ marginRight: "5px" }}>{icon}</span>}
-            <span>{placeholder}</span>
+            <span>{placeholder}</span> 
           </div>
         }
         onChange={handleClick}

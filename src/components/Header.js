@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 import Sidebar from "./Sidebar";
 
 function Header({ label }) {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
 
   const showSiderbar = () => setSidebar(!sidebar);
 
