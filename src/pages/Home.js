@@ -19,7 +19,7 @@ function Home() {
                 fontFamily: "Helvetica",
               }}
             >
-              <h6>Tira-Facil</h6>
+              <h6>Tira-Fácil</h6>
             </div>
           }
         />

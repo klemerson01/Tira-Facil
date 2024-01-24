@@ -13,10 +13,11 @@ function Etiqueta() {
   const [carregando, setCarregando] = useState(false);
   const [codBarras, setCodBarras] = useState("");
   const [produtoNotFound, setProdutoNotFound] = useState(false);
-  // const [teste, setTeste] = useState(false);
-  useEffect(() => {
-    console.log("prod", carregando);
-  }, [carregando]);
+
+  // useEffect(() => {
+  //   console.log("prod", carregando);
+  // }, [carregando]);
+
   async function pesquisaProdutoId(id) {
     try {
       const response = await axios.get(
@@ -127,21 +128,32 @@ function Etiqueta() {
               fontFamily: "Helvetica",
             }}
           >
-            <h6>Tira-Facil</h6>
+            <h6>Tira-Fácil</h6>
           </div>
         }
       />
+
       <div id="bodyEtiqueta" className="divCentralizada">
         <div id="containerEtiqueta">
           <div id="topo" className="divCentralizada">
             <InputEtiqueta
               id="input"
-              type="text"
+              type="number"
               value={codBarras}
               setValue={setCodBarras}
               funcEnter={codProduto}
             />
-            <Button id="botaoPreco" label="Pesquisar" onClick={codProduto} />
+            <Button
+              id="botaoPreco"
+              label="Pesquisar"
+              onClick={() => {
+                if (codBarras == "") {
+                  alert("Preenchimento obrigatório")
+                }else{
+                  codProduto()
+                }
+              }}
+            />
           </div>
 
           {/* Icone de carregamento */}
@@ -155,7 +167,7 @@ function Etiqueta() {
           )}
 
           {/* Etiqueta com os dados */}
-          <div id="corpo12">
+          <div id="corpoEtiqueta">
             {carregando !== false ? null : produtoNotFound == true ? (
               <div id="notFound"> Produto não encontrado</div>
             ) : (
@@ -166,8 +178,7 @@ function Etiqueta() {
                   descricao={produto.descricao}
                 />
               )
-            )}  
-            
+            )}
           </div>
         </div>
       </div>

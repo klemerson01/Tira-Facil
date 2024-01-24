@@ -5,23 +5,21 @@ export function InputEtiqueta({ setValue, value, funcEnter }) {
   }
 
   function handleEnter(event) {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && value.trim() !== "") {
       funcEnter();
     }
   }
 
   return (
-    <>
-      <input
-        onChange={handleClick}
-        onKeyDown={handleEnter}
-        value={value}
-        id="input"
-        placeholder=" Digite aqui seu código..."
-        required
-        autoFocus
-      />
-    </>
+    <input
+      type="number"
+      onChange={handleClick}
+      onKeyDown={handleEnter}
+      value={value}
+      id="input"
+      placeholder=" Digite aqui seu código..."
+      autoFocus
+    />
   );
 }
 

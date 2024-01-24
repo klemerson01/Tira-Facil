@@ -32,8 +32,8 @@ function Login() {
       console.log(localStorage);
       navigate("/home");
     } catch (error) {
-      alert("ERRO");
-      console.error("Erro na solicitação:", error);
+      alert("401");
+      console.error("Erro na 401:", );
     }
   }
 
@@ -50,7 +50,7 @@ function Login() {
         >
           <h1 id="h1">Faça seu login</h1>
           <Input
-            placeholder={"Username"}
+            placeholder={"Usuário"}
             type={"text"}
             icon={<PersonIcon />}
             setValue={setUser}
@@ -58,7 +58,7 @@ function Login() {
           <br />
           <Input
             setValue={setPass}
-            placeholder={"Password"}
+            placeholder={"Senha"}
             type={"password"}
             icon={<KeyIcon />}
           />
@@ -71,7 +71,7 @@ function Login() {
           <img id="logo" src="/CPTK.png" />
         </div>
         <div id="textForm">
-          <h5 id="titulo_main">Tira-Facil</h5>
+          <h5 id="titulo_main">Tira-Fácil</h5>
         </div>
       </div>
     </div>
